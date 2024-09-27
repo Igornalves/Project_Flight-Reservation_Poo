@@ -1,5 +1,7 @@
 package Class;
 
+import Services.PassageiroService;
+
 public class Passageiro {
 
     private String nome;
@@ -9,6 +11,11 @@ public class Passageiro {
     private String typePassaporte;
     private String programaFidelidade;
 
+    // Instância do serviço de reserva
+    @SuppressWarnings("unused")
+    private PassageiroService passageiroService;
+
+    // Construtor
     public Passageiro(String nome, int cpf, String dataNascimento, String email, String typePassaporte,
             String programaFidelidade) {
         this.nome = nome;
@@ -17,6 +24,7 @@ public class Passageiro {
         this.email = email;
         this.typePassaporte = typePassaporte;
         this.programaFidelidade = programaFidelidade;
+        this.passageiroService = new PassageiroService(); // Serviço é instanciado internamente
     }
 
     public String getNome() {

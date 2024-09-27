@@ -1,5 +1,7 @@
 package Class;
 
+import Services.ReservaService;
+
 public class Reserva {
 
     private String id;
@@ -9,6 +11,11 @@ public class Reserva {
     private boolean status;
     private int valor;
 
+    // Instância do serviço de reserva
+    @SuppressWarnings("unused")
+    private ReservaService reservaService;
+
+    // Construtor
     public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, boolean status, int valor) {
         this.id = id;
         this.passageiro = passageiro;
@@ -16,6 +23,7 @@ public class Reserva {
         this.assento = assento;
         this.status = status;
         this.valor = valor;
+        this.reservaService = new ReservaService(); // Serviço é instanciado internamente
     }
 
     public String getId() {

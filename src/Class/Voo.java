@@ -1,5 +1,7 @@
 package Class;
 
+import Services.VooService;
+
 public class Voo {
 
     private int numeroVoo;
@@ -11,6 +13,11 @@ public class Voo {
     private String tipoAeronave;
     private int listaAssentos;
 
+    // Instância do serviço de reserva
+    @SuppressWarnings("unused")
+    private VooService vooService;
+
+    // Construtor
     public Voo(int numeroVoo, String origem, String destino, String dataPartida, String dataChegada,
             String companiaAerea, String tipoAeronave, int listaAssentos) {
         this.numeroVoo = numeroVoo;
@@ -21,6 +28,7 @@ public class Voo {
         this.companiaAerea = companiaAerea;
         this.tipoAeronave = tipoAeronave;
         this.listaAssentos = listaAssentos;
+        this.vooService = new VooService(); // Serviço é instanciado internamente
     }
 
     public int getNumeroVoo() {

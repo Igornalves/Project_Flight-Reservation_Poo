@@ -1,5 +1,7 @@
 package Class;
 
+import Services.AssentosService;
+
 public class Assento {
 
     private int numero;
@@ -12,11 +14,17 @@ public class Assento {
     // assistência para embarcar.
     private String preferencial;
 
+    // Instância do serviço de reserva
+    @SuppressWarnings("unused")
+    private AssentosService assentosService;
+
+    // Construtor
     public Assento(int numero, String classe, boolean disponibilidade, String preferencial) {
         this.numero = numero;
         this.classe = classe;
         this.disponibilidade = disponibilidade;
         this.preferencial = preferencial;
+        this.assentosService = new AssentosService(); // Serviço é instanciado internamente
     }
 
     public int getNumero() {
