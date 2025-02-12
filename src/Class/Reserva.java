@@ -8,7 +8,7 @@ public class Reserva {
     private Passageiro passageiro;
     private Voo voo;
     private Assento assento;
-    private boolean status;
+    private String status;
     private int valor;
 
     // Instância do serviço de reserva
@@ -16,7 +16,7 @@ public class Reserva {
     private ReservaService reservaService;
 
     // Construtor
-    public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, boolean status, int valor) {
+    public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, String status, int valor) {
         this.id = id;
         this.passageiro = passageiro;
         this.voo = voo;
@@ -58,11 +58,11 @@ public class Reserva {
         this.assento = assento;
     }
 
-    public boolean isStatus() {
+    public String isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

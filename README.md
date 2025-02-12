@@ -66,3 +66,39 @@ System.out.println("Hello, World!");
 }
 }
 ```
+
+
+ ## Ciando comandos para poder execultar o .jar completo e roda o projeto
+
+- 1️⃣ Criar a pasta META-INF dentro de out/
+Execute este comando no PowerShell para criar a pasta necessária:
+
+ ```powershell
+New-Item -ItemType Directory -Path out\META-INF -Force
+ ```
+- 2️⃣ Criar o MANIFEST.MF corretamente
+Agora crie o arquivo MANIFEST.MF no PowerShell com:
+
+```powershell
+Set-Content -Path out\META-INF\MANIFEST.MF -Value "Manifest-Version: 1.0`nMain-Class: App.App`n"
+
+```
+
+- 1️⃣ Criar a pasta target (caso ainda não exista)
+
+```powershell
+New-Item -ItemType Directory -Path target -Force
+```
+
+- 2️⃣ Criar o .jar diretamente na pasta target
+
+```powershell
+jar cfm target/Project_Flight-Reservation_Poo.jar out/META-INF/MANIFEST.MF -C out .
+````
+
+- 4️⃣ Executar o .jar
+Teste para ver se funciona:
+
+```powershell
+java -jar target/Project_Flight-Reservation_Poo.jar
+```

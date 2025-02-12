@@ -8,7 +8,7 @@ public class Assento {
 
     // a classe econômica, a classe executiva (business) e a primeira classe
     private String classe;
-    private boolean disponibilidade;
+    private String disponibilidade;
     // Passageiros viajando com crianças menores de 2 anos de idade. Gestantes.
     // Passageiros com mais de 60 anos de idade. Passageiros que precisam de
     // assistência para embarcar.
@@ -19,7 +19,7 @@ public class Assento {
     private AssentosService assentosService;
 
     // Construtor
-    public Assento(int numero, String classe, boolean disponibilidade, String preferencial) {
+    public Assento(int numero, String classe, String disponibilidade, String preferencial) {
         this.numero = numero;
         this.classe = classe;
         this.disponibilidade = disponibilidade;
@@ -43,11 +43,11 @@ public class Assento {
         this.classe = classe;
     }
 
-    public boolean isDisponibilidade() {
+    public String isDisponibilidade() {
         return disponibilidade;
     }
 
-    public void setDisponibilidade(boolean disponibilidade) {
+    public void setDisponibilidade(String disponibilidade) {
         this.disponibilidade = disponibilidade;
     }
 

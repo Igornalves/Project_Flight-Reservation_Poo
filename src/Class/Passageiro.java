@@ -5,7 +5,7 @@ import Services.PassageiroService;
 public class Passageiro {
 
     private String nome;
-    private int cpf;
+    private long cpf;
     private String dataNascimento;
     private String email;
     private String typePassaporte;
@@ -16,7 +16,7 @@ public class Passageiro {
     private PassageiroService passageiroService;
 
     // Construtor
-    public Passageiro(String nome, int cpf, String dataNascimento, String email, String typePassaporte,
+    public Passageiro(String nome, long cpf, String dataNascimento, String email, String typePassaporte,
             String programaFidelidade) {
         this.nome = nome;
         this.cpf = cpf;
@@ -35,13 +35,13 @@ public class Passageiro {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
-    }
+    } 
 
     public String getDataNascimento() {
         return dataNascimento;

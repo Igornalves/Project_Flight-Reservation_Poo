@@ -7,14 +7,14 @@ public class Pagamento {
     private String id;
     private String valor;
     private String metodoPagamento;
-    private boolean statusPagamento;
+    private String statusPagamento;
 
     // Instância do serviço de reserva
     @SuppressWarnings("unused")
     private PagamentoService pagamentoService;
 
     // Construtor
-    public Pagamento(String id, String valor, String metodoPagamento, boolean statusPagamento) {
+    public Pagamento(String id, String valor, String metodoPagamento, String statusPagamento) {
         this.id = id;
         this.valor = valor;
         this.metodoPagamento = metodoPagamento;
@@ -46,11 +46,11 @@ public class Pagamento {
         this.metodoPagamento = metodoPagamento;
     }
 
-    public boolean isStatusPagamento() {
+    public String isStatusPagamento() {
         return statusPagamento;
     }
 
-    public void setStatusPagamento(boolean statusPagamento) {
+    public void setStatusPagamento(String statusPagamento) {
         this.statusPagamento = statusPagamento;
     }
 

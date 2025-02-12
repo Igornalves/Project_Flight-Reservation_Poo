@@ -12,14 +12,15 @@ public class Voo {
     private String companiaAerea;
     private String tipoAeronave;
     private int listaAssentos;
-
+    private String status;
+    
     // Instância do serviço de reserva
     @SuppressWarnings("unused")
     private VooService vooService;
-
+    
     // Construtor
     public Voo(int numeroVoo, String origem, String destino, String dataPartida, String dataChegada,
-            String companiaAerea, String tipoAeronave, int listaAssentos) {
+    String companiaAerea, String tipoAeronave, int listaAssentos, String status) {
         this.numeroVoo = numeroVoo;
         this.origem = origem;
         this.destino = destino;
@@ -28,7 +29,16 @@ public class Voo {
         this.companiaAerea = companiaAerea;
         this.tipoAeronave = tipoAeronave;
         this.listaAssentos = listaAssentos;
+        this.status = status;
         this.vooService = new VooService(); // Serviço é instanciado internamente
+    }
+    
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public int getNumeroVoo() {
