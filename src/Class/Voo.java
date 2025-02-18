@@ -1,5 +1,7 @@
 package Class;
 
+import java.util.List;
+
 import Services.VooService;
 
 public class Voo {
@@ -11,8 +13,11 @@ public class Voo {
     private String dataChegada;
     private String companiaAerea;
     private String tipoAeronave;
-    private int listaAssentos;
     private String status;
+
+    private List<Assento> assentos;
+    
+    private List<Reserva> reservas;
     
     // Instância do serviço de reserva
     @SuppressWarnings("unused")
@@ -20,7 +25,7 @@ public class Voo {
     
     // Construtor
     public Voo(int numeroVoo, String origem, String destino, String dataPartida, String dataChegada,
-    String companiaAerea, String tipoAeronave, int listaAssentos, String status) {
+    String companiaAerea, String tipoAeronave, String status, List<Assento> assentos, List<Reserva> reservas) {
         this.numeroVoo = numeroVoo;
         this.origem = origem;
         this.destino = destino;
@@ -28,9 +33,26 @@ public class Voo {
         this.dataChegada = dataChegada;
         this.companiaAerea = companiaAerea;
         this.tipoAeronave = tipoAeronave;
-        this.listaAssentos = listaAssentos;
         this.status = status;
+        this.assentos = assentos;
+        this.reservas = reservas;
         this.vooService = new VooService(); // Serviço é instanciado internamente
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+    
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+    
+    public List<Assento> getAssentos() {
+        return assentos;
+    }
+
+    public void setAssentos(List<Assento> assentos) {
+        this.assentos = assentos;
     }
     
     public String getStatus() {
@@ -95,14 +117,6 @@ public class Voo {
 
     public void setTipoAeronave(String tipoAeronave) {
         this.tipoAeronave = tipoAeronave;
-    }
-
-    public int getListaAssentos() {
-        return listaAssentos;
-    }
-
-    public void setListaAssentos(int listaAssentos) {
-        this.listaAssentos = listaAssentos;
     }
 
 }

@@ -11,23 +11,34 @@ public class Reserva {
     private String status;
     private int valor;
 
+    private Pagamento pagamento;
+    
     // Instância do serviço de reserva
     @SuppressWarnings("unused")
     private ReservaService reservaService;
-
+    
     // Construtor
-    public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, String status, int valor) {
+    public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, String status, int valor,Pagamento pagamento) {
         this.id = id;
         this.passageiro = passageiro;
         this.voo = voo;
         this.assento = assento;
         this.status = status;
         this.valor = valor;
+        this.pagamento = pagamento;
         this.reservaService = new ReservaService(); // Serviço é instanciado internamente
     }
-
+    
     public String getId() {
         return id;
+    }
+    
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 
     public void setId(String id) {
