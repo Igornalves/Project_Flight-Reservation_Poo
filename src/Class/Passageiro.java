@@ -1,5 +1,6 @@
 package Class;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Services.PassageiroService;
@@ -13,6 +14,7 @@ public class Passageiro {
     private String typePassaporte;
     private String programaFidelidade;
 
+    @SuppressWarnings("unused")
     private List<Reserva> reservas; 
 
     // Instância do serviço de reserva
@@ -20,24 +22,27 @@ public class Passageiro {
     private PassageiroService passageiroService;
     
     // Construtor
-    public Passageiro(String nome, long cpf, String dataNascimento, String email, String typePassaporte,
-    String programaFidelidade, List<Reserva> reservas) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.dataNascimento = dataNascimento;
-        this.email = email;
-        this.typePassaporte = typePassaporte;
-        this.programaFidelidade = programaFidelidade;
-        this.reservas = reservas;
+    public Passageiro() {
+        reservas = new ArrayList<Reserva>();
         this.passageiroService = new PassageiroService(); // Serviço é instanciado internamente
     }
 
-    public List<Reserva> getReservas() {
-        return reservas;
+    public void adcionandoReserva(Reserva reserva) {
+        reservas.add(reserva);
+        System.out.println("sua reserva " + reserva + " foi adcionada");
     }
 
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
+    public void removendoReserva(Reserva reserva) {
+        reservas.remove(reserva);
+        System.out.println("sua reserva " + reserva + " foi removida");
+    }
+
+    public int quantidadeDereservas(){
+        return reservas.size();
+    }
+
+    public Reserva getReserva (int intex){
+        return reservas.get(intex);
     }
     
     public String getNome() {

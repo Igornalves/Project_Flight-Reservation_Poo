@@ -24,36 +24,61 @@ public class Voo {
     private VooService vooService;
     
     // Construtor
-    public Voo(int numeroVoo, String origem, String destino, String dataPartida, String dataChegada,
-    String companiaAerea, String tipoAeronave, String status, List<Assento> assentos, List<Reserva> reservas) {
-        this.numeroVoo = numeroVoo;
-        this.origem = origem;
-        this.destino = destino;
-        this.dataPartida = dataPartida;
-        this.dataChegada = dataChegada;
-        this.companiaAerea = companiaAerea;
-        this.tipoAeronave = tipoAeronave;
-        this.status = status;
-        this.assentos = assentos;
-        this.reservas = reservas;
+    public Voo() {
         this.vooService = new VooService(); // Serviço é instanciado internamente
+    } 
+
+    public void adcionadoAssentos(Assento assento) {
+        assentos.add(assento);
+        System.out.println("o assento " + assento + " foi adcionando");
     }
 
-    public List<Reserva> getReservas() {
-        return reservas;
-    }
-    
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
-    }
-    
-    public List<Assento> getAssentos() {
-        return assentos;
+    public void removerAssento(Assento assento) {
+        assentos.remove(assento);
+        System.out.println("o assento " + assento + " foi removido com sucesso");
     }
 
-    public void setAssentos(List<Assento> assentos) {
-        this.assentos = assentos;
+    public int quantidadeDeAssento() {
+        return assentos.size();
     }
+
+    public Assento getAssento(int intex) {
+        return assentos.get(intex);
+    }
+
+    public void adcionandoReserva(Reserva reserva) {
+        reservas.add(reserva);
+        System.out.println("sua reserva " + reserva + " foi adcionada");
+    }
+
+    public void removendoReserva(Reserva reserva) {
+        reservas.remove(reserva);
+        System.out.println("sua reserva " + reserva + " foi removida");
+    }
+
+    public int quantidadeDereservas(){
+        return reservas.size();
+    }
+
+    public Reserva getReserva (int intex){
+        return reservas.get(intex);
+    }
+
+    // public List<Reserva> getReservas() {
+    //     return reservas;
+    // }
+    
+    // public void setReservas(List<Reserva> reservas) {
+    //     this.reservas = reservas;
+    // }
+    
+    // public List<Assento> getAssentos() {
+    //     return assentos;
+    // }
+
+    // public void setAssentos(List<Assento> assentos) {
+    //     this.assentos = assentos;
+    // }
     
     public String getStatus() {
         return status;

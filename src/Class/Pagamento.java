@@ -14,11 +14,7 @@ public class Pagamento {
     private PagamentoService pagamentoService;
 
     // Construtor
-    public Pagamento(String id, String valor, String metodoPagamento, String statusPagamento) {
-        this.id = id;
-        this.valor = valor;
-        this.metodoPagamento = metodoPagamento;
-        this.statusPagamento = statusPagamento;
+    public Pagamento() {
         this.pagamentoService = new PagamentoService(); // Serviço é instanciado internamente
     }
 

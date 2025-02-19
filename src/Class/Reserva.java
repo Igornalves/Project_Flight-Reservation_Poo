@@ -18,14 +18,7 @@ public class Reserva {
     private ReservaService reservaService;
     
     // Construtor
-    public Reserva(String id, Passageiro passageiro, Voo voo, Assento assento, String status, int valor,Pagamento pagamento) {
-        this.id = id;
-        this.passageiro = passageiro;
-        this.voo = voo;
-        this.assento = assento;
-        this.status = status;
-        this.valor = valor;
-        this.pagamento = pagamento;
+    public Reserva() {
         this.reservaService = new ReservaService(); // Serviço é instanciado internamente
     }
     
