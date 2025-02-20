@@ -29,7 +29,7 @@ public class Passageiro {
 
     public void adcionandoReserva(Reserva reserva) {
         reservas.add(reserva);
-        System.out.println("sua reserva " + reserva + " foi adcionada");
+        System.out.println("sua reserva " + reserva.getValor() + " foi adcionada");
     }
 
     public void removendoReserva(Reserva reserva) {

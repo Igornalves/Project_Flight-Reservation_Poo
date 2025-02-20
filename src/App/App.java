@@ -1,6 +1,7 @@
 package App;
 
 import java.io.ObjectInputFilter.Status;
+import java.util.UUID;
 
 import Class.Assento;
 import Class.Pagamento;
@@ -28,6 +29,13 @@ public class App {
         passageiro1.setTypePassaporte(TypePassaporte.comum.toString());
         passageiro1.setProgramaFidelidade(TipoProgramaFidelidade.MILHAS.toString());
         passageiro1.adcionandoReserva(reserva1);
+
+        reserva1.setId(UUID.randomUUID().toString());
+        reserva1.setAssento(assento1);
+        reserva1.setPagamento(pagamento1);
+        reserva1.setStatus(StatusVoo.Check_in.toString());
+        reserva1.setValor(2200);
+        reserva1.setVoo(voo1);
 
         assento1.setClasse(TypeClass.economy.toString());
         assento1.setDisponibilidade(null);
