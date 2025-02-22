@@ -1,6 +1,5 @@
 package App;
 
-import java.io.ObjectInputFilter.Status;
 import java.util.UUID;
 
 import Class.Assento;
@@ -8,6 +7,8 @@ import Class.Pagamento;
 import Class.Passageiro;
 import Class.Reserva;
 import Class.Voo;
+import Enum.MetodoPagamento;
+import Enum.StatusPagamento;
 import Enum.StatusVoo;
 import Enum.TipoProgramaFidelidade;
 import Enum.TypeClass;
@@ -38,9 +39,22 @@ public class App {
         reserva1.setVoo(voo1);
 
         assento1.setClasse(TypeClass.economy.toString());
-        assento1.setDisponibilidade(null);
-        assento1.setNumero(0);
-        assento1.setPreferencial(null);
+        assento1.setDisponibilidade(false);
+        assento1.setNumero(12);
+        assento1.setPreferencial("normal");
 
+        pagamento1.setId(UUID.randomUUID().toString());
+        pagamento1.setMetodoPagamento(MetodoPagamento.PIX.toString());
+        pagamento1.setStatusPagamento(StatusPagamento.Pagamento_Pendente.toString());
+        pagamento1.setValor("R$ 12,00");
+
+        voo1.setCompaniaAerea(null);
+        voo1.setOrigem(null);
+        voo1.setDestino(null);
+        voo1.setDataPartida(null);
+        voo1.setDataChegada(null);
+        voo1.setNumeroVoo(0);
+        voo1.setStatus(null);
+        voo1.setTipoAeronave(null);
     }
 }
