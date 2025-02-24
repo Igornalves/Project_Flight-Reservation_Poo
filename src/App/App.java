@@ -7,9 +7,11 @@ import Class.Pagamento;
 import Class.Passageiro;
 import Class.Reserva;
 import Class.Voo;
+import Enum.CompanhiaAerea;
 import Enum.MetodoPagamento;
 import Enum.StatusPagamento;
 import Enum.StatusVoo;
+import Enum.TipoAeronave;
 import Enum.TipoProgramaFidelidade;
 import Enum.TypeClass;
 import Enum.TypePassaporte;
@@ -48,13 +50,15 @@ public class App {
         pagamento1.setStatusPagamento(StatusPagamento.Pagamento_Pendente.toString());
         pagamento1.setValor("R$ 12,00");
 
-        voo1.setCompaniaAerea(null);
-        voo1.setOrigem(null);
-        voo1.setDestino(null);
-        voo1.setDataPartida(null);
-        voo1.setDataChegada(null);
-        voo1.setNumeroVoo(0);
-        voo1.setStatus(null);
-        voo1.setTipoAeronave(null);
+        voo1.setCompaniaAerea(CompanhiaAerea.AZUL.toString());
+        voo1.setOrigem("Brasilia");
+        voo1.setDestino("Teresina");
+        voo1.setDataPartida("12/03/2025");
+        voo1.setDataChegada("13/03/2025");
+        voo1.setNumeroVoo(23);
+        voo1.setStatus(StatusVoo.Check_out.toString());
+        voo1.setTipoAeronave(TipoAeronave.AIRBUS_A350.toString());
+
+        
     }
 }
