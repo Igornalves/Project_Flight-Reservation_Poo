@@ -59,6 +59,39 @@ public class App {
         voo1.setStatus(StatusVoo.Check_out.toString());
         voo1.setTipoAeronave(TipoAeronave.AIRBUS_A350.toString());
 
-        
+        System.out.println("\n--- Informações do Passageiro ---");
+        System.out.println("Nome: " + passageiro1.getNome());
+        System.out.println("CPF: " + passageiro1.getCpf());
+        System.out.println("Email: " + passageiro1.getEmail());
+        System.out.println("Data de Nascimento: " + passageiro1.getDataNascimento());
+        System.out.println("Tipo de Passaporte: " + passageiro1.getTypePassaporte());
+        System.out.println("Programa de Fidelidade: " + passageiro1.getProgramaFidelidade());
+
+        System.out.println("\n--- Informações da Reserva ---");
+        System.out.println("ID da Reserva: " + reserva1.getId());
+        System.out.println("Status da Reserva: " + reserva1.getStatus());
+        System.out.println("Valor da Reserva: R$" + reserva1.getValor());
+
+        System.out.println("\n--- Informações do Assento ---");
+        System.out.println("Número do Assento: " + assento1.getNumero());
+        System.out.println("Classe do Assento: " + assento1.getClasse());
+        System.out.println("Preferencial: " + assento1.getPreferencial());
+        System.out.println("Disponibilidade: " + (assento1.isDisponibilidade() ? "Disponível" : "Indisponível"));
+
+        System.out.println("\n--- Informações do Pagamento ---");
+        System.out.println("ID do Pagamento: " + pagamento1.getId());
+        System.out.println("Método de Pagamento: " + pagamento1.getMetodoPagamento());
+        System.out.println("Status do Pagamento: " + pagamento1.getStatusPagamento());
+        System.out.println("Valor do Pagamento: " + pagamento1.getValor());
+
+        System.out.println("\n--- Informações do Voo ---");
+        System.out.println("Companhia Aérea: " + voo1.getCompaniaAerea());
+        System.out.println("Origem: " + voo1.getOrigem());
+        System.out.println("Destino: " + voo1.getDestino());
+        System.out.println("Data de Partida: " + voo1.getDataPartida());
+        System.out.println("Data de Chegada: " + voo1.getDataChegada());
+        System.out.println("Número do Voo: " + voo1.getNumeroVoo());
+        System.out.println("Status do Voo: " + voo1.getStatus());
+        System.out.println("Tipo de Aeronave: " + voo1.getTipoAeronave());
     }
 }

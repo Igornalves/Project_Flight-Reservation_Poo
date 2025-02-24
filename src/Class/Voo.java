@@ -30,12 +30,12 @@ public class Voo {
 
     public void adcionadoAssentos(Assento assento) {
         assentos.add(assento);
-        System.out.println("o assento " + assento + " foi adcionando");
+        System.out.println("o assento " + assento + " foi adcionando" + " \n \n");
     }
 
     public void removerAssento(Assento assento) {
         assentos.remove(assento);
-        System.out.println("o assento " + assento + " foi removido com sucesso");
+        System.out.println("o assento " + assento + " foi removido com sucesso" + " \n \n");
     }
 
     public int quantidadeDeAssento() {
